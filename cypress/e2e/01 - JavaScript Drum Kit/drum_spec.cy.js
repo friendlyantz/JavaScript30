@@ -1,6 +1,6 @@
 describe('empty spec', () => {
   it('passes', () => {
-    cy.visit('/')
+    cy.visit('/01 - JavaScript Drum Kit/index.html ')
     cy.contains('clap')
     cy.contains('hihat')
     cy.contains('kick')
