@@ -63,6 +63,7 @@ window.addEventListener('keydown', function(event) {
   console.log(audio);
 
   if(!audio) return;
+  audio.currentTime = 0;
   audio.play()
 });
 </script>
