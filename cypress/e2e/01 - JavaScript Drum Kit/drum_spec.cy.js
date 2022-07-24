@@ -8,6 +8,8 @@ describe('empty spec', () => {
     cy.get(`.keys > [data-key="83"]`).contains('S')
     cy.get(`.keys > [data-key="83"]`).contains('hihat')
 
+    cy.get('body').trigger('keydown', { keyCode: 83 })
+
     cy.get(`.keys > [data-key="68"]`).contains('D')
     cy.get(`.keys > [data-key="68"]`).contains('kick')
 
