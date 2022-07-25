@@ -1,4 +1,4 @@
-describe('empty spec', () => {
+describe('drum spec', () => {
   it('passes', () => {
     cy.visit('/javascript30/01 - JavaScript Drum Kit/index.html ');
 
