@@ -3,11 +3,28 @@ describe('clock', () => {
     cy.visit('/javascript30/02 - JS and CSS Clock/index.html ');
   });
 
-  it('start with hour, minute and second hands starting at 10h:10m:20s', () => {
+  it('defaults hour, minute and second hands to 10h:10m:20s', () => {
 
-    cy.get('.clock > .clock-face > .hour-hand');
-    cy.get('.clock > .clock-face > .min-hand');
-    cy.get('.clock > .clock-face > .second-hand');
+    cy.get('.clock > .clock-face > .hour-hand')
+      .should(
+        'have.css',
+        'transform',
+        'matrix(0.866025, 0.5, -0.5, 0.866025, 0, 0)' // 'rotate(30deg) or 10o'clock'
+      )
+
+    cy.get('.clock > .clock-face > .min-hand')
+      .should(
+        'have.css',
+        'transform',
+        'matrix(-0.866025, 0.5, -0.5, -0.866025, 0, 0)' // 'rotate(150deg) or 2o'clock'
+        );
+
+    cy.get('.clock > .clock-face > .second-hand')
+      .should(
+        'have.css',
+        'transform',
+        'matrix(-0.866025, -0.5, 0.5, -0.866025, 0, 0)' // 'rotate(210deg) or 4o'clock'
+      );
 
     cy.get('.clock > .clock-face > .hand')
       .should(
