@@ -21,7 +21,7 @@ describe('clock', () => {
       .should(
         'have.css',
         'transition',
-        'all 0.5s ease 0s'
+        'all 1.5s cubic-bezier(0.89, -0.04, 0.58, 1) 0s' // Ci fals and overwrites all 0.5s to 0sec
       );
 
     cy.get('.clock > .clock-face > .min-hand')
@@ -33,7 +33,7 @@ describe('clock', () => {
       .should(
         'have.css',
         'transition',
-        'all 0.5s cubic-bezier(0, 1.24, 0.95, 0.03) 0s'
+        'all 0.9s cubic-bezier(0, 1.24, 0.95, 0.03) 0s'
       );
 
     cy.get('.clock > .clock-face > .second-hand')
@@ -45,7 +45,7 @@ describe('clock', () => {
       .should(
         'have.css',
         'transition',
-        'all 0.5s cubic-bezier(0.42, 1.3, 1, 0.44) 0s'
+        'all 0.6s cubic-bezier(0.42, 1.3, 1, 0.44) 0s'
       );
   });
 
