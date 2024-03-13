@@ -49,6 +49,6 @@
   "dependencies": {
     "cypress": "^13.7.0",
     "npm-run-all": "^4.1.2",
-    "serve": "11.3.0"
+    "serve": "^14.2.1"
   }
 }
