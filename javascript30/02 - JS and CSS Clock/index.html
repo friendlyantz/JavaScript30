@@ -96,6 +96,11 @@
         const seconds = now.getSeconds();
         const secondsDegrees = (seconds / 60) * 360; // CSS rotation starts from left 9Oclock position and rotates clockwise
         secondsHand.style.transform = `rotate(${secondsDegrees}deg)`;
+        if (secondsDegrees >= 335) {
+          secondsHand.style.transition = "none";
+        } else {
+          secondsHand.style.transition = "all 1.5";
+        }
         console.log(seconds);
         console.log(secondsDegrees);
 
